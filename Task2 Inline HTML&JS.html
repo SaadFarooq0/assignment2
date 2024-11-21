@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+  <style>
+    /* Styling for a beautiful red background */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f44336; /* Red background */
+      color: white; /* White text color for contrast */
+      text-align: center; /* Center the content */
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: #4CAF50; /* Green button */
+      color: white;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #45a049; /* Slightly darker green when hovered */
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM Manipulation with JavaScript</h1>
+  
+  <p id="text">This is the original text.</p>
+  
+  <button id="changeTextButton">Change Text</button>
+  <button id="changeStyleButton">Change Background Color</button>
+
+  <script>
+    // Get the paragraph and buttons by their IDs
+    const textParagraph = document.getElementById('text');
+    const changeTextButton = document.getElementById('changeTextButton');
+    const changeStyleButton = document.getElementById('changeStyleButton');
+
+    // Change text content when the "Change Text" button is clicked
+    changeTextButton.addEventListener('click', function() {
+      textParagraph.textContent = 'The text has been changed!';
+    });
+
+    // Change background color when the "Change Background Color" button is clicked
+    changeStyleButton.addEventListener('click', function() {
+      document.body.style.backgroundColor = 'lightblue'; // Change background color to light blue
+    });
+  </script>
+</body>
+</html>
